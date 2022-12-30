@@ -1,0 +1,9 @@
+resource "aws_transfer_server" "TransferServer" {
+    endpoint_type = "VPC"
+    identity_provider_type = "SERVICE_MANAGED"
+    logging_role = "arn:aws:iam::736973552055:role/sftp"
+    endpoint_details {
+        vpc_endpoint_id = "vpce-0cfdaa8d04f1483ec"
+    }
+    tags = 
+}

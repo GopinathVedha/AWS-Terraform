@@ -1,0 +1,29 @@
+resource "aws_security_group" "EC2SecurityGroup" {
+    description = "Allow RDP access"
+    name = "infra-rdp-admin"
+    tags = 
+    vpc_id = "vpc-dfb5bcb8"
+    egress {
+        cidr_blocks = [
+            "0.0.0.0/0"
+        ]
+        from_port = 0
+        protocol = "-1"
+        to_port = 0
+    }
+}
+
+resource "aws_security_group" "EC2SecurityGroup2" {
+    description = "Allo access for SSH"
+    name = "dev-infraadmin"
+    tags = 
+    vpc_id = "vpc-dfb5bcb8"
+    egress {
+        cidr_blocks = [
+            "0.0.0.0/0"
+        ]
+        from_port = 0
+        protocol = "-1"
+        to_port = 0
+    }
+}
